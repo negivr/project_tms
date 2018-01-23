@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>{{ object.first_name }} {{ object.last_name }}</h1>
+    <p>id: {{ object.person_id }}</p>
+    <p>First: {{ object.first_name }}</p>
+    <p>Last: {{ object.last_name }}</p>
+    <p>DOB: {{ object.birth_date }}</p>
+    <p>ssn: {{ object.ssn }}</p>
+
+
+{% endblock %}

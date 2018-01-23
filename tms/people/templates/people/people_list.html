@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block  title %}
+    People List
+{% endblock %}
+
+{% block content %}
+<h1>kako si</h1>
+
+<h1>{{ trucks }}</h1>
+
+    {% for person in people %}
+        <li><a href="{{ person.person_id }}">{{ person.first_name }} {{ person.last_name }}</a></li>
+    {% endfor %}
+
+{% endblock %}
+
+
+
+
+
+
+
