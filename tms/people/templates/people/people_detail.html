@@ -2,12 +2,18 @@
 
 {% block content %}
 
-    <h1>{{ object.first_name }} {{ object.last_name }}</h1>
-    <p>id: {{ object.person_id }}</p>
-    <p>First: {{ object.first_name }}</p>
-    <p>Last: {{ object.last_name }}</p>
-    <p>DOB: {{ object.birth_date }}</p>
-    <p>ssn: {{ object.ssn }}</p>
+    <h1>{{ people_detail.first_name }} {{ people_detail.last_name }}</h1>
+    <p>id: {{ people_detail.person_id }}</p>
+    <p>First: {{ people_detail.first_name }}</p>
+    <p>Last: {{ people_detail.last_name }}</p>
+    <p>DOB: {{ people_detail.birth_date }}</p>
+    <p>ssn: {{ people_detail.ssn }}</p>
+
+
+    <p><a class="btn btn-warning" href="{% url 'people:update' pk=people_detail.pk %}">Update</a></p>
+    <p><a class="btn btn-danger" href="{% url 'people:delete' pk=people_detail.pk %}">Delete</a></p>
+    <p><a href="{% url 'people:people_list' %}">back to driver list</a></p>
+
 
 
 {% endblock %}

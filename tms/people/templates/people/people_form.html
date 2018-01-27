@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>
+        {% if not form.instance.pk %}
+        Create person
+        {% else %}
+        Update person
+        {% endif %}
+    </h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="btn btn-primary" value="Submit">
+        <p><a href="{% url 'people:people_list' %}">back to driver list</a></p>
+    </form>
+
+{% endblock %}
+
