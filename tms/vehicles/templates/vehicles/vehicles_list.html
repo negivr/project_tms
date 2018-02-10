@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+    {% for vehicle in vehicles %}
+        <li><a href="{{ vehicle.vehicle_id }}">{{ vehicle.year }} {{ vehicle.make }} {{ vehicle.vin_number }}</a></li>
+    {% endfor %}
+
+{% endblock %}
