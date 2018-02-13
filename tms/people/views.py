@@ -48,7 +48,7 @@ def people_detail_view(request, pk=None):
 class PeopleCreateView(CreateView):
     fields = '__all__'
     model = People
-    success_url = reverse_lazy('people:people_list')
+    success_url = reverse_lazy('people:all')
 
 
 class PeopleUpdateView(UpdateView):
@@ -59,6 +59,6 @@ class PeopleUpdateView(UpdateView):
 
 class PeopleDeleteView(DeleteView):
     model = People
-    success_url = reverse_lazy('people:people_list')
+    success_url = reverse_lazy('people:all')
     template_name = 'people/people_confirm_delete.html'
 

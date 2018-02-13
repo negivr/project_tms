@@ -31,18 +31,10 @@
         <div class="container">
             <a class="navbar-brand mynav" href="{% url 'home' %}">TMS</a>
             <ul class="nav navbar-nav navbar-right">
-                {% if user.is_authenticated %}
                     <li><a href="{% url 'people:all' %}">Drivers</a></li>
                     <li><a href="{% url 'people:create' %}">Add driver</a></li>
                     <li><a href="{% url 'vehicles:all' %}">Vehicles</a></li>
                     <li><a href="{% url 'vehicles:create' %}">Add vehicle</a></li>
-                    <li><a href="{% url 'addresses:all' %}">Addresses</a></li>
-                    <li><a href="{% url 'addresses:create' %}">Add Address</a></li>
-                    <li><a href="{% url 'vehicles:search' %}">Search</a></li>
-                    <li><a href="{% url 'accounts:logout' %}">Logout</a></li>
-                {% else %}
-                    <li><a href="{% url 'accounts:login' %}">Login</a></li>
-                {% endif %}
             </ul>
         </div>
     </nav>

@@ -10,5 +10,6 @@ urlpatterns = [
 
 urlpatterns += [
     path('people/', include('people.urls', namespace='people')),
+    path('vehicles/', include('vehicles.urls', namespace='vehicles')),
 ]
 

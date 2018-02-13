@@ -20,3 +20,8 @@ class Vehicles(models.Model):
     def get_absolute_url(self):
         return reverse('vehicles:detail', kwargs={'pk': self.pk})
 
+    def __str__(self):
+        return self.make + ' - ' + self.vin_number + ' - ' + self.vehicle_type
+
+
+
